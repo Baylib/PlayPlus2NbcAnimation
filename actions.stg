@@ -1,0 +1,39 @@
+defright()::=<<
+#define right(pwr,time) \
+    OnRev(OUT_C,pwr) \
+    wait time \
+    OnFwd(OUT_B,pwr)
+>>
+
+defleft()::=<<
+#define left(pwr,time) \
+    OnRev(OUT_B,pwr) \
+    wait time \
+    OnFwd(OUT_C,pwr)
+>>
+
+defdown()::=<<
+#define up(pwr,time) \
+    OnFwd(OUT_BC,pwr) \
+    wait time
+>>
+defup()::=<<
+#define down(pwr,time) \
+    OnRev(OUT_BC,pwr) \
+    wait time
+>>
+
+
+actiondeclaration()::=<<
+<defright()>
+<defleft()>
+<defdown()>
+<defup()>
+>>
+
+
+right(pwr,time)::="right(<pwr>,<time>)"
+left(pwr,time)::="left(<pwr>,<time>)"
+up(pwr,time)::="up(<pwr>,<time>)"
+down(pwr,time)::="down(<pwr>,<time>)"
+jump(pwr,time)::="up(<pwr>,<time>)"

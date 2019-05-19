@@ -1,0 +1,22 @@
+#define right(pwr,time) \
+    OnRev(OUT_C,pwr) \
+    wait time \
+    OnFwd(OUT_B,pwr)
+#define left(pwr,time) \
+    OnRev(OUT_B,pwr) \
+    wait time \
+    OnFwd(OUT_C,pwr)
+#define up(pwr,time) \
+    OnFwd(OUT_BC,pwr) \
+    wait time
+#define down(pwr,time) \
+    OnRev(OUT_BC,pwr) \
+    wait time
+
+thread main
+	right(100,500)
+	down(100,1000)
+	right(100,500)
+	 PlayTone(TONE_C5,500)
+exit
+endt

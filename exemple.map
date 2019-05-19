@@ -1,0 +1,8 @@
+/* Map exemple  */
+
+map: 5 5
+ _ P G G _
+ @ G G Q G
+ G G B G G
+ G G A A X
+ _ G T G _

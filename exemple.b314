@@ -1,0 +1,29 @@
+/* Exemple PlayPlus */
+
+#import "exemple.map"
+
+bool f1;
+int x;
+
+bool fct1(int x)
+{
+  f1 = true && (x < 10);
+  return f1;
+}
+
+void f2(int x)
+{
+  right();
+  down(x);
+  right(1);
+  return void;
+}
+
+void main(){
+  int x = 2;
+  if (!fct1(5) == false) {
+        f2(x);
+  }
+  dig();
+  return void;
+}
